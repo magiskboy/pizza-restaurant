@@ -17,13 +17,14 @@ export default function LocationSection() {
         </div>
         
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          {/* Map placeholder */}
-          <div className="h-96 w-full bg-gray-300">
-            <div className="flex h-full w-full items-center justify-center bg-gray-200">
-              <span className="text-gray-500">Google Maps Embed</span>
-            </div>
-          </div>
-          
+          {/* Embedded Google Map */}
+          <iframe
+            className="h-96 w-full rounded-lg border border-gray-200"
+            src="https://maps.google.com/maps?q=123%20Main%20St%2C%20Downtown%2C%20City&amp;output=embed"
+            loading="lazy"
+            allowFullScreen
+            title="Pizza Restaurant Location"
+          ></iframe>
           <div>
             <div className="mb-8">
               <h3 className="mb-4 text-2xl font-bold">Our Location</h3>

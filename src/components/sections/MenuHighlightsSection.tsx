@@ -9,24 +9,32 @@ const featuredItems = [
     name: "Margherita",
     description: "Classic simplicity – fresh mozzarella, sweet basil, and our signature San Marzano sauce.",
     price: "$14.99",
+    // Unsplash image for Margherita pizza
+    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
   },
   {
     id: 2,
     name: "Pepperoni",
     description: "Spicy, smoky pepperoni on a crisp, caramelized crust – a crowd-pleaser every time.",
     price: "$16.99",
+    // Unsplash image for Pepperoni pizza
+    image: "https://images.unsplash.com/photo-1564128442383-9201fcc740eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
   },
   {
     id: 3,
     name: "Quattro Formaggi",
     description: "Four artisan cheeses melt together for a velty, indulgent bite.",
     price: "$18.99",
+    // Unsplash image for Four cheese pizza
+    image: "https://images.unsplash.com/photo-1595378833483-c995dbe4d74f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
   },
   {
     id: 4,
     name: "Veggie Delight",
     description: "A garden of roasted vegetables, garlic-infused olive oil, and herb-kissed mozzarella.",
     price: "$17.99",
+    // Unsplash image for Veggie pizza
+    image: "https://images.unsplash.com/photo-1730929851365-015a0b62ae5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
   },
 ];
 
@@ -59,11 +67,15 @@ export default function MenuHighlightsSection() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {featuredItems.map((item) => (
             <div key={item.id} className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg transition hover:shadow-xl">
-              <div className="h-48 bg-gray-300">
-                {/* Placeholder for pizza image */}
-                <div className="flex h-full w-full items-center justify-center bg-gray-200">
-                  <span className="text-gray-500">Pizza Image</span>
-                </div>
+              {/* Pizza image */}
+              <div className="relative h-48 w-full">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
               <div className="p-6">
                 <div className="mb-2 flex items-center justify-between">
