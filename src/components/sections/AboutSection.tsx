@@ -1,5 +1,8 @@
 "use client";
 
+import React from "react";
+import Image from "next/image";
+
 export default function AboutSection() {
   return (
     <section className="py-16 px-4 md:py-24 md:px-8">
@@ -13,24 +16,45 @@ export default function AboutSection() {
         
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#8C9A58] text-white">
-              <span className="text-2xl">🌿</span>
+            {/* Locally sourced image */}
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#8C9A58]">
+              <Image
+                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg"
+                alt="Locally sourced"
+                width={64}
+                height={64}
+                className="rounded-full"
+              />
             </div>
             <h3 className="mb-2 text-xl font-bold">Locally Sourced</h3>
             <p>Fresh ingredients from local farms</p>
           </div>
           
           <div className="text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#8C9A58] text-white">
-              <span className="text-2xl">👨‍👩‍👧‍👦</span>
+            {/* Family friendly image */}
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#8C9A58]">
+              <Image
+                src="https://images.unsplash.com/photo-1761839259484-4741afbbdcbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg"
+                alt="Family friendly"
+                width={64}
+                height={64}
+                className="rounded-full"
+              />
             </div>
             <h3 className="mb-2 text-xl font-bold">Family Friendly</h3>
             <p>Welcoming atmosphere for all ages</p>
           </div>
           
           <div className="text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#8C9A58] text-white">
-              <span className="text-2xl">⏱️</span>
+            {/* Fast delivery image */}
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#8C9A58]">
+              <Image
+                src="https://images.unsplash.com/photo-1651978595416-f665fd4014ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg"
+                alt="Fast delivery"
+                width={64}
+                height={64}
+                className="rounded-full"
+              />
             </div>
             <h3 className="mb-2 text-xl font-bold">Fast Delivery</h3>
             <p>Hot pizza delivered to your door</p>
